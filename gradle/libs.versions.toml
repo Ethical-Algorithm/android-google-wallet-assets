@@ -28,7 +28,7 @@ playServicesMLKitBarcodeScanningVersion = "18.3.0"
 firebaseCrashlyticsVersion = "18.4.1"
 firebaseAnalyticsVersion = "21.3.0"
 firebaseFirestoreVersion = "24.7.1"
-firebaseAppCheckVersion ="17.0.1"
+firebaseAppCheckVersion ="18.0.0"
 
 googlePlayIntegrityVersion="1.2.0"
 googleMaterialVersion ="1.9.0"

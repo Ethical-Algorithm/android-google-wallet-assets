@@ -36,7 +36,7 @@ googleMaterialVersion ="1.9.0"
 okhttpVersion="4.9.3"
 airbnbLottieVersion = "6.1.0"
 glideVersion="4.16.0"
-coroutinesCoreVersion = "1.7.3"
+coroutinesCoreVersion = "1.8.1"
 
 eaExtensionsVersion="1.0.1.2"
 eaRecyclerViewToolsKitVersion="1.0.0.8"

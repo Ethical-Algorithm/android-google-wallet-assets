@@ -1,7 +1,7 @@
 [versions]
 gradlePluginVersion = "7.4.0" # This version "8.1.0" requires JAVA 17 or higher
 kotlinPluginVersion = "1.9.21"
-dokkaPluginVersion = "1.9.10"
+dokkaPluginVersion = "1.9.20"
 detektPluginVersion = "1.23.4"
 dependencyAnalysisPluginVersion = "1.27.0"
 sematicGitLogPluginVersion = "0.3.4"

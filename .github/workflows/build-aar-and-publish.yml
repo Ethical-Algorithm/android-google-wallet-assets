@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 env:
   moduleVersion: ${{ vars.MODULE_VERSION }}

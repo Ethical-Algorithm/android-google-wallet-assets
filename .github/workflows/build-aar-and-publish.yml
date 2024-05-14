@@ -1,0 +1,38 @@
+name: Android Build and Publish
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  keystoreFile: ${{ secrets.ANDROID_KEYSTORE }}
+  password: ${{ secrets.ANDROID_PASSWORD }}
+  alias: ${{ vars.ANDROID_ALIAS }}
+  moduleVersion: ${{ vars.MODULE_VERSION }}
+  moduleBuild: ${{ github.run_number }}
+  token: ${{ secrets.ALL_REPO_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Setup Build Version
+        run: bash ./.scripts/setup_build_version.sh
+      - name: Setup Demo Keystore
+        run: bash ./.scripts/setup_keystore_config.sh
+      - name: Setup Local Properties
+        run: bash ./.scripts/setup_local_properties.sh
+      - name: Build Module AAR
+        run: ./gradlew :extensions:assembleRelease --stacktrace
+      - name: Publish to Git Packages
+        run: ./gradlew :extensions:publish
+      - name: Create Tag and Add to GitHub
+        run: bash ./.scripts/setup_add_tag.sh

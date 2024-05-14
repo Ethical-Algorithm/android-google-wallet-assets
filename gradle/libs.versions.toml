@@ -1,0 +1,117 @@
+[versions]
+gradlePluginVersion = "7.4.0" # This version "8.1.0" requires JAVA 17 or higher
+kotlinPluginVersion = "1.9.21"
+dokkaPluginVersion = "1.9.10"
+detektPluginVersion = "1.23.4"
+dependencyAnalysisPluginVersion = "1.27.0"
+sematicGitLogPluginVersion = "0.3.4"
+crashlyticsPluginVersion = "2.8.1"
+googleServicesPluginVersion = "4.3.15"
+
+androidXCoreVersion="1.10.1"
+androidXSplashscreenVersion="1.0.1"
+androidXAppCompatVersion="1.6.1"
+androidXConstraintLayoutVersion="2.1.4"
+androidXActivityVersion="1.8.0"
+androidXFragmentVersion="1.6.2"
+androidXLifecycleVersion="2.6.1"
+androidXNavigationVersion="2.6.0"
+androidXRecyclerViewVersion="1.3.1"
+androidXExifinterfaceVersion="1.3.3"
+androidXCameraXVersion="1.3.1"
+androidXTestEspressoCoreVersion = "3.5.1"
+androidXJunitVersion = "1.1.5"
+
+playServicesInstantAppVersion = "18.0.1"
+playServicesMLKitBarcodeScanningVersion = "18.3.0"
+
+firebaseCrashlyticsVersion = "18.4.1"
+firebaseAnalyticsVersion = "21.3.0"
+firebaseFirestoreVersion = "24.7.1"
+firebaseAppCheckVersion ="17.0.1"
+
+googlePlayIntegrityVersion="1.2.0"
+googleMaterialVersion ="1.9.0"
+
+okhttpVersion="4.9.3"
+airbnbLottieVersion = "6.1.0"
+glideVersion="4.16.0"
+coroutinesCoreVersion = "1.7.3"
+
+eaExtensionsVersion="1.0.1.2"
+eaRecyclerViewToolsKitVersion="1.0.0.8"
+eaCameraKitVersion="1.0.0.0"
+eaNavigationKitVersion="1.0.0.4"
+eaOkHttpKitVersion="1.0.0.4"
+
+junitVersion = "4.13.2"
+annotationVersion = "1.7.0"
+
+[libraries]
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidXCoreVersion" }
+androidx-core-splashscreen = {group = "androidx.core", name = "core-splashscreen", version.ref = "androidXSplashscreenVersion" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidXAppCompatVersion" }
+androidx-constraintlayout= { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidXConstraintLayoutVersion" }
+androidx-activity={ group = "androidx.activity", name = "activity-ktx", version.ref = "androidXActivityVersion" }
+androidx-fragment={ group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidXFragmentVersion"}
+androidx-lifecycle-livedata={ group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "androidXLifecycleVersion" }
+androidx-lifecycle-viewmodel={ group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidXLifecycleVersion" }
+androidx-lifecycle-runtime={ group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidXLifecycleVersion" }
+androidx-navigation-fragment={ group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "androidXNavigationVersion" }
+androidx-navigation-ui={ group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "androidXNavigationVersion" }
+androidx-navigation-runtime={ group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "androidXNavigationVersion" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "androidXRecyclerViewVersion" }
+androidx-camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "androidXCameraXVersion" }
+androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "androidXCameraXVersion" }
+androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "androidXCameraXVersion" }
+androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "androidXCameraXVersion" }
+androidx-exifinterface={ group = "androidx.exifinterface", name = "exifinterface", version.ref = "androidXExifinterfaceVersion" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidXTestEspressoCoreVersion" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidXJunitVersion" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotationVersion" }
+
+com-github-bumptech-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion" }
+com-github-bumptech-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glideVersion" }
+
+com-google-android-gms-play-services-instantapps = { group = "com.google.android.gms", name = "play-services-instantapps", version.ref = "playServicesInstantAppVersion" }
+com-google-android-gms-play-services-mlkit-barcode-scanning = { group = "com.google.android.gms", name = "play-services-mlkit-barcode-scanning", version.ref = "playServicesMLKitBarcodeScanningVersion" }
+
+com-airbnb-android-lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "airbnbLottieVersion" }
+
+com-squareup-okhttp3-okhttp= {group = "com.squareup.okhttp3", name="okhttp", version.ref = "okhttpVersion"}
+
+com-google-firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx", version.ref = "firebaseCrashlyticsVersion" }
+com-google-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx", version.ref = "firebaseAnalyticsVersion" }
+com-google-firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreVersion" }
+com-google-firebase-appcheck = { group = "com.google.firebase", name = "firebase-appcheck-ktx", version.ref = "firebaseAppCheckVersion" }
+com-google-firebase-appcheck-playintegrity = { group = "com.google.firebase", name = "firebase-appcheck-playintegrity", version.ref = "firebaseAppCheckVersion" }
+com-google-firebase-appcheck-debug = { group = "com.google.firebase", name = "firebase-appcheck-debug", version.ref = "firebaseAppCheckVersion" }
+com-google-playintegrity = { group = "com.google.android.play", name = "integrity", version.ref = "googlePlayIntegrityVersion"}
+com-google-android-material = { group = "com.google.android.material", name = "material", version.ref = "googleMaterialVersion" }
+
+org-jetbrains-kotlinx-coroutines-core = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutinesCoreVersion"}
+
+net-ealgorithm-extensions={ group = "net.ealgorithm", name = "extensions", version.ref = "eaExtensionsVersion" }
+net-ealgorithm-recycler-view-tools-kit={ group = "net.ealgorithm", name = "recycler-view-tools-kit", version.ref = "eaRecyclerViewToolsKitVersion" }
+net-ealgorithm-camera-kit={ group = "net.ealgorithm", name = "camera-kit", version.ref = "eaCameraKitVersion" }
+net-ealgorithm-navigation-kit={ group  = "net.ealgorithm", name = "navigation-kit", version.ref = "eaNavigationKitVersion" }
+net-ealgorithm-ok-http-kit={group = "net.ealgorithm", name = "ok-http-kit", version.ref = "eaOkHttpKitVersion" }
+
+junit-junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
+
+[plugins]
+com-android-application = { id = "com.android.application", version.ref = "gradlePluginVersion" }
+com-android-library = { id = "com.android.library", version.ref = "gradlePluginVersion" }
+com-android-dynamic-feature = { id = "com.android.dynamic-feature", version.ref = "gradlePluginVersion" }
+com-google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlyticsPluginVersion"}
+com-google-gms-google-services = { id = "com.google.gms.google-services", version = "googleServicesPluginVersion" }
+
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinPluginVersion" }
+org-jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinPluginVersion" }
+org-jetbrains-kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinPluginVersion" }
+org-jetbrains-dokka= { id = "org.jetbrains.dokka", version.ref = "dokkaPluginVersion" }
+
+io-gitlab-arturbosch-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detektPluginVersion" }
+
+gradle-conventional-changelog = { id = "com.github.rukgar.gradle-conventional-changelog", version.ref = "sematicGitLogPluginVersion" }
+com-autonomousapps-dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysisPluginVersion"}

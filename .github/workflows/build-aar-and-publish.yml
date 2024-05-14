@@ -6,12 +6,9 @@ on:
       - main
 
 env:
-  keystoreFile: ${{ secrets.ANDROID_KEYSTORE }}
-  password: ${{ secrets.ANDROID_PASSWORD }}
-  alias: ${{ vars.ANDROID_ALIAS }}
   moduleVersion: ${{ vars.MODULE_VERSION }}
   moduleBuild: ${{ github.run_number }}
-  token: ${{ secrets.ALL_REPO_TOKEN }}
+  token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
@@ -26,13 +23,28 @@ jobs:
           java-version: 11
       - name: Setup Build Version
         run: bash ./.scripts/setup_build_version.sh
-      - name: Setup Demo Keystore
-        run: bash ./.scripts/setup_keystore_config.sh
       - name: Setup Local Properties
         run: bash ./.scripts/setup_local_properties.sh
       - name: Build Module AAR
-        run: ./gradlew :extensions:assembleRelease --stacktrace
+        run: ./gradlew :googlewallet:assembleRelease --stacktrace
       - name: Publish to Git Packages
-        run: ./gradlew :extensions:publish
+        run: ./gradlew :googlewallet:publish
       - name: Create Tag and Add to GitHub
         run: bash ./.scripts/setup_add_tag.sh
+      - name: Generate CHANGELOG
+        id: changelog
+        uses: requarks/changelog-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: "v${{ env.moduleVersion }}.${{ env.moduleBuild }}"
+          excludeTypes: chore,docs
+      - name: Create Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          allowUpdates: true
+          draft: false
+          makeLatest: true
+          name: "v${{ env.moduleVersion }}.${{ env.moduleBuild }}"
+          tag: "v${{ env.moduleVersion }}.${{ env.moduleBuild }}"
+          body: ${{ steps.changelog.outputs.changes }}
+          token: ${{ secrets.GITHUB_TOKEN }}

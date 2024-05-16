@@ -4,30 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="48dp"
+    tools:background="@drawable/googlewallet_button_background"
     tools:parentTag="android.widget.RelativeLayout">
-    <LinearLayout
-        android:duplicateParentState="true"
+    <ImageView
+        android:id="@+id/googlewallet_label_image_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="2"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:contentDescription="@string/text_content_description"
-            android:duplicateParentState="true"
-            android:paddingHorizontal="20sp"
-            android:paddingVertical="10sp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/add_to_googlewallet_button_content" />
-    </LinearLayout>
-  <ImageView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:contentDescription="@string/overlay_content_description"
-      android:duplicateParentState="true"
-      android:scaleType="fitXY"
-      android:src="@drawable/googlewallet_button_overlay" />
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/text_content_description"
+        android:duplicateParentState="true"
+        android:paddingStart="@dimen/googlewallet_button_horizontal_margins"
+        android:paddingEnd="@dimen/googlewallet_button_horizontal_margins"
+        android:paddingTop="@dimen/googlewallet_button_vertical_margins"
+        android:paddingBottom="@dimen/googlewallet_button_vertical_margins"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_to_googlewallet_button_content" />
+    <ImageView
+        android:id="@+id/googlewallet_overlay_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:duplicateParentState="true"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/overlay_content_description"
+        android:scaleType="fitXY"
+        android:src="@drawable/googlewallet_button_overlay" />
 </merge>

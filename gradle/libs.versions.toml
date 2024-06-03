@@ -25,7 +25,7 @@ androidXJunitVersion = "1.1.5"
 playServicesInstantAppVersion = "18.0.1"
 playServicesMLKitBarcodeScanningVersion = "18.3.0"
 
-firebaseCrashlyticsVersion = "18.4.1"
+firebaseCrashlyticsVersion = "19.0.1"
 firebaseAnalyticsVersion = "21.3.0"
 firebaseFirestoreVersion = "24.7.1"
 firebaseAppCheckVersion ="17.0.1"

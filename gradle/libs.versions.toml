@@ -104,7 +104,7 @@ com-android-application = { id = "com.android.application", version.ref = "gradl
 com-android-library = { id = "com.android.library", version.ref = "gradlePluginVersion" }
 com-android-dynamic-feature = { id = "com.android.dynamic-feature", version.ref = "gradlePluginVersion" }
 com-google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlyticsPluginVersion"}
-com-google-gms-google-services = { id = "com.google.gms.google-services", version = "googleServicesPluginVersion" }
+com-google-gms-google-services = { id = "com.google.gms.google-services", version = "4.4.2" }
 
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinPluginVersion" }
 org-jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinPluginVersion" }

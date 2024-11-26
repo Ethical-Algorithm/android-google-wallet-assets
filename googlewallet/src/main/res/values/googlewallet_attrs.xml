@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Google Wallet Button -->
+    <declare-styleable name="AddToGoogleWalletButton">
+        <attr name="marginStart" format="dimension" />
+        <attr name="marginTop" format="dimension" />
+        <attr name="marginEnd" format="dimension" />
+        <attr name="marginBottom" format="dimension" />
+        <attr name="marginsHorizontal" format="dimension" />
+        <attr name="marginsVertical" format="dimension" />
+    </declare-styleable>
+
+</resources>

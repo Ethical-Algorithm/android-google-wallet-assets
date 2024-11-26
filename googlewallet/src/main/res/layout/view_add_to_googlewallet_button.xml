@@ -13,10 +13,8 @@
         android:layout_centerInParent="true"
         android:contentDescription="@string/text_content_description"
         android:duplicateParentState="true"
-        android:paddingStart="@dimen/googlewallet_button_horizontal_margins"
-        android:paddingEnd="@dimen/googlewallet_button_horizontal_margins"
-        android:paddingTop="@dimen/googlewallet_button_vertical_margins"
-        android:paddingBottom="@dimen/googlewallet_button_vertical_margins"
+        android:layout_marginHorizontal="@dimen/googlewallet_button_horizontal_margins"
+        android:layout_marginVertical="@dimen/googlewallet_button_vertical_margins"
         android:scaleType="fitCenter"
         android:src="@drawable/add_to_googlewallet_button_content" />
     <ImageView
